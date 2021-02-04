@@ -6,7 +6,7 @@ const io = require('socket.io')(http)
 const AD_KEY = process.env.WEBQUEUE_ADMIN_KEY;
 const PORT = process.env.PORT || 8124;
 
-let queues = new Array(20); // queue state
+let queues = new Array(30); // queue state
 
 for (var i = 0; i < queues.length; ++i) {
     queues[i] = [];
