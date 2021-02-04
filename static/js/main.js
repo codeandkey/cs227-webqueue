@@ -15,10 +15,11 @@ function reloadUi() {
         console.log('adding element ' + id);
         $('#queue-entries').append('<div class="row queue-entry h2 text-center text-light" id="queue-element' + id + '">' + (i + 1) + '. ' + queues[cur_sect][id] + '</div>');
 
-        $('#queue-element' + i).click(() => {
-            console.log('clicked on ' + id);
-            socket.emit('remove', cur_sect, id, $('#key-input').val());
-            console.log('sending remove: ', cur_sect, id, $('#key-input').val());
+        $('#queue-element' + id).click(() => {
+            var ind = parseInt($(this).attr('id').slice(-1));
+            console.log('clicked on ' + ind);
+            socket.emit('remove', cur_sect, ind, $('#key-input').val());
+            console.log('sending remove: ', cur_sect, ind, $('#key-input').val());
         });
     }
 }
