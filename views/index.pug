@@ -14,10 +14,10 @@ html
 
     body(class="bg-dark")
         div(id="bar" class="container-fluid row text-center bg-light text-dark m-0 p-2")
-            div(class="h1 col") Lab Webqueue
-            div(class="col input-group")
+            div(class="h1 col-4") Lab Webqueue
+            div(class="col-3 input-group")
                 input(type="text" class="form-control" placeholder="Your name" id="name-input")
-            div(class="col input-group")
+            div(class="col-2 input-group")
                 select(class="custom-select" id="section-input")
                     option(value='1') Section 1
                     option(value='2') Section 2
@@ -39,9 +39,9 @@ html
                     option(value='18') Section 18
                     option(value='19') Section 19
                     option(value='20') Section 20
-            div(class="col align-middle")
+            div(class="col-0 align-middle")
                 button(type="button" class="btn btn-outline-primary" id="btn-queue") Queue
-            div(class="col input-group align-middle")
+            div(class="col-2 input-group align-middle")
                 input(type="text" class="form-control" placeholder="Control key (optional)" id="key-input")
         div(id="queue" class="container align-middle")
             div(id="waiting-msg" class="alert alert-info m-2") Waiting for queue information..
